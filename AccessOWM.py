@@ -33,5 +33,5 @@ def getWeatherForecast():
         
         if 'rain'in item and '3h' in item['rain']:
             rainfall = item['rain']['3h']
-            
+        text = ''
         
