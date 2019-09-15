@@ -33,5 +33,9 @@ def getWeatherForecast():
         
         if 'rain'in item and '3h' in item['rain']:
             rainfall = item['rain']['3h']
-        text = ''
+        print('日時:{0} 天気:{1} 気温（℃）:{2} 雨量（mm）:{3}'.format()
+        farecastDatetime, weatherDescription, temprature, rainfall))
+        
+        
+getWeatherForecast()
         
