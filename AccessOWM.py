@@ -8,9 +8,9 @@ import sys
 
 from pytz import timezone
 
-API_KEY = '990918c7f5f421581fd53d52c0274294'
 ZIP = '123-0841,JP'
-API_URL = 'http://api.openweathermap.org/data/2.5/forecast?zip={0}&units=metric&lang=ja&APPID={1}'
+API_KEY = '990918c7f5f421581fd53d52c0274294'
+API_URL = 'http://api.openweathermap.org/data/2.5/forecast?zip={0}&units=metric&lang=ja&APPID={1}cnt=3'
 
 
 def getWeatherForecast():
@@ -33,8 +33,8 @@ def getWeatherForecast():
         
         if 'rain'in item and '3h' in item['rain']:
             rainfall = item['rain']['3h']
-        print('日時:{0} 天気:{1} 気温（℃）:{2} 雨量（mm）:{3}'.format()
-        farecastDatetime, weatherDescription, temprature, rainfall))
+            
+        
         
         
 getWeatherForecast()
