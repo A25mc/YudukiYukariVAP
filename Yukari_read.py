@@ -55,9 +55,8 @@ class VoiceRoid(object):
 if __name__ == "__main__":
     import sys
     import AccessOWM
-    args = sys.argv
-    print(args)
-
+    text = AccessOWM.getWeatherForecast()
+    print(text)
     if 1 < len(text):
         voiceroid = VoiceRoid("VOICEROID＋ 結月ゆかり EX")
-        text = 
+        voiceroid.say(text)
