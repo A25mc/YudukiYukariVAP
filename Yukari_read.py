@@ -54,10 +54,10 @@ class VoiceRoid(object):
 
 if __name__ == "__main__":
     import sys
+    import AccessOWM
     args = sys.argv
     print(args)
 
-    if 1 < len(args):
+    if 1 < len(text):
         voiceroid = VoiceRoid("VOICEROID＋ 結月ゆかり EX")
-        text = args[1]
-        voiceroid.say(text)
+        text = 
