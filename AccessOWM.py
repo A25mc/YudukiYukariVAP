@@ -23,7 +23,7 @@ def getWeatherForecast():
         return
     
     # prrint(forecastData)
-    
+        
     for item in forecastData['list']:
         forecastDatatime = timezone(
             'Asia/Tokyo').localize(datetime.datetime.fromtimestamp(item['dt']))
@@ -35,7 +35,4 @@ def getWeatherForecast():
             rainfall = item['rain']['3h']
             
         
-        
-        
-getWeatherForecast()
         
