@@ -1,5 +1,6 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
+from itertools import count
 import json
 import datetime
 import os 
@@ -16,13 +17,13 @@ API_URL = 'http://api.openweathermap.org/data/2.5/forecast?zip={0}&units=metric&
 def getWeatherForecast():
     url = API_URL.format(ZIP, API_KEY)
     response = requests.get(url)
-    forecastData = ison.loads(response.text)
+    forecastData = json.loads(response.text)
     
-    if not ('list' in forcastData):
+    if not ('list' in forecastData):
         print('error')
         return
     
-    # prrint(forecastData)
+    # print(forecastData)
         
     for item in forecastData['list']:
         forecastDatatime = timezone(
@@ -33,6 +34,13 @@ def getWeatherForecast():
         
         if 'rain'in item and '3h' in item['rain']:
             rainfall = item['rain']['3h']
-            
-        
-        
+        app.wwr[count].configure(text="{0}mm".format(math.cell(rainfall)))
+
+        count += 1
+
+        if count>= len(app.wwl):
+            app.wp.condigure(text="{0},{1}(lat:{2},lon:{3})".format(
+                forecastData["city"]["country"],
+                forecastData["city"]["name"],
+                forecastData["city"]["coord"]["lat"],
+                forecastData["city"]["coord"]["lon"]))
