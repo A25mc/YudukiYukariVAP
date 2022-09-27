@@ -3,7 +3,7 @@
 from itertools import count
 import json
 import datetime
-import os 
+import os
 import requests
 import sys
 
@@ -18,20 +18,20 @@ def getWeatherForecast():
     url = API_URL.format(ZIP, API_KEY)
     response = requests.get(url)
     forecastData = json.loads(response.text)
-    
+
     if not ('list' in forecastData):
         print('error')
         return
-    
+
     # print(forecastData)
-        
+
     for item in forecastData['list']:
         forecastDatatime = timezone(
             'Asia/Tokyo').localize(datetime.datetime.fromtimestamp(item['dt']))
         weatherDescription = item['weather'][0]['description']
         temprature = item['main']['temp']
         rainfall = 0
-        
+
         if 'rain'in item and '3h' in item['rain']:
             rainfall = item['rain']['3h']
         app.wwr[count].configure(text="{0}mm".format(math.cell(rainfall)))
