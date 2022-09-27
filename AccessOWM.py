@@ -1,3 +1,10 @@
+"""
+requestsをhttpxに変更する方向で
+pytzとTimezoneのどちらを使うか
+なぜ関数化しているのか
+Jsonふぁいるの取得方法を調べておくこと
+"""
+
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
 from itertools import count
