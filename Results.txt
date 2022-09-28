@@ -1,0 +1,13 @@
+気象データの計測日次時間(unixTime): 1646881943
+気象データの計測日次時間(date): 2022-03-10 03:12:23+00:00
+天気コード: 804
+天気: Clouds
+天気詳細: 厚い雲
+気温(K): {'temp': 286.21, 'temp_max': 286.92, 'temp_min': 285.13, 'feels_like': 284.54, 'temp_kf': None}
+気温(℃): {'temp': 13.06, 'temp_max': 13.77, 'temp_min': 11.98, 'feels_like': 11.39, 'temp_kf': None}
+湿度(%): 37
+気圧(hPa): {'press': 1022, 'sea_level': None}
+風: {'speed': 0.89, 'deg': 220, 'gust': 2.68}
+雲量: 100
+雨量: {}
+積雪量: {}
