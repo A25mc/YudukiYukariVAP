@@ -1,12 +1,18 @@
 from pyowm.owm import OWM
 from pyowm.utils import formatting
-from pyowm.utills.config import get_edfaullt_config
+from pyowm.utils.config import get_default_config
+
+#Pyowmのコンフィグ設定
 
 config_dict = get_edfaullt_config()
 config_dict["language"] = "ja"
 
-owm = OWM("990918c7f5f421581fd53d52c0274294",config_dict)
-mgr = OWM.weather_manager()
+#Pyowmライブラリの初期化
+
+owm = OWM('990918c7f5f421581fd53d52c0274294',config_dict)
+mgr = owm.weather_manager()
+
+#現在の気象データ取得
 
 observation = mgr.weather_at_place("123-0841,JP")
 
