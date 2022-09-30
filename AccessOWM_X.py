@@ -16,7 +16,7 @@ mgr = owm.weather_manager()
 
 observation = mgr.weather_at_place("123-0841,JP")
 
-w = observation.wweather
+w = observation.weather
 print("気象データの計測日次時間(unixTime): {}".format(w.ref_time))
 print("気象データの計測日次時間(date): {}".format(formatting.to_date(w.ref_time)))
 print("天気コード: {}".format(w.weather_code))
