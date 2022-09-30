@@ -4,7 +4,7 @@ from pyowm.utils.config import get_default_config
 
 #Pyowmのコンフィグ設定
 
-config_dict = get_edfaullt_config()
+config_dict = get_default_config()
 config_dict["language"] = "ja"
 
 #Pyowmライブラリの初期化
