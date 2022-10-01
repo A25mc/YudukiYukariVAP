@@ -1,4 +1,3 @@
-import imp
 from playsound import playsound
 from pyowm.owm import OWM
 from pyowm.utils import formatting
