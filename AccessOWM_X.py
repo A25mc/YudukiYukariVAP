@@ -1,3 +1,5 @@
+import imp
+from playsound import playsound
 from pyowm.owm import OWM
 from pyowm.utils import formatting
 from pyowm.utills.config import get_edfaullt_config
@@ -10,18 +12,23 @@ mgr = OWM.weather_manager()
 
 observation = mgr.weather_at_place("123-0841,JP")
 
-w = observation.wweather
-print("気象データの計測日次時間(unixTime): {}".format(w.ref_time))
-print("気象データの計測日次時間(date): {}".format(formatting.to_date(w.ref_time)))
+w = observation.weather
 print("天気コード: {}".format(w.weather_code))
-print("天気: {}".format(w.status))
-print("天気詳細: {}".format(w.detailed_status))
-print("気温(K): {}".format(w.temperature()))
-print("気温(℃): {}".format(w.temperature("celsius")))
-print("湿度(%): {}".format(w.humidity))
-print("気圧(hPa): {}".format(w.barometric_pressure()))
-print("風: {}".format(w.wind()))
+playsound(w.weather.code+".wav")
 
-print("雲量: {}".format(w.clouds))
-print("雨量: {}".format(w.rain))
-print("積雪量: {}".format(w.snow))
+print("気温(℃): {}".format(w.temperature("celsius")))
+temp =
+if int(temp) >= 10:
+    list=list(temp)
+    playsound(list[0]+".wav")
+    playsound("x10.wav")
+    playsound(list[1]+".wav")
+
+print("気圧(hPa): {}".format(w.barometric_pressure()))
+pre = int()
+if pre > 1015:
+    playsound("prehigh.wav")
+elif pre >= 1010 and pre <=1015:
+    playsound("preaverage.wav")
+elif pre <1010:
+    playsound("prelow.wav")
