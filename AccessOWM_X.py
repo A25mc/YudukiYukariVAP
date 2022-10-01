@@ -13,6 +13,7 @@ mgr = OWM.weather_manager()
 observation = mgr.weather_at_place("123-0841,JP")
 
 w = observation.weather
+
 print("天気コード: {}".format(w.weather_code))
 playsound(w.weather.code+".wav")
 
