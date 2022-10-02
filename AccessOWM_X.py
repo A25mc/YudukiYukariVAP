@@ -22,7 +22,7 @@ print("天気コード: {}".format(w.weather_code))
 playsound(w.weather.code+".wav")
 
 
-playsound("tamprature.wav")
+playsound("temperature.wav")
 
 
 print("気温(℃): {}".format(round(w.temperature("celsius"))))
