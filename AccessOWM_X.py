@@ -18,9 +18,10 @@ w = observation.weather
 playsound("Goodmorning.wav")
 
 
-print("天気コード: {}".format(w.weather_code))
-playsound(w.weather.code+".wav")
-
+"""print("天気コード: {}".format(w.weather_code))
+playsound(w.weather.code + ".wav")"""
+print("天気: {}".format(w.status))
+playsound(w.status + ".wav")
 
 playsound("temperature.wav")
 
